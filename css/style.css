@@ -1,0 +1,80 @@
+
+/* Initialize */
+
+:root {
+  --brand-color: #0012ff;
+  --base-padding: 2rem;
+}
+
+@font-face {
+  font-family: "Citizen OT";
+  src: url("../RSC/font/ufonts.com_citizen.ttf");
+}
+
+/* General */
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background: var(--brand-color);
+  font-family: "Citizen OT";
+  margin: 0;
+  overflow: none;
+}
+
+
+/* Titles */
+
+
+h1, h2, p {
+  margin: 0 auto;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+
+/* Poster */
+
+main {
+  padding: var(--base-padding);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  box-sizing: border-box;
+}
+
+.circle {
+  width: 20rem;
+  height: 20rem;
+  opacity: .75;
+}
+
+.poster {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.poster-infos {
+  padding-bottom: var(--base-padding);
+}
+
+.poster-date {
+  margin-bottom: 6.5rem;
+}
+
+.poster-date h2 {
+  transform: rotate(-90deg);
+}
+
+.pattern {
+  position: absolute;
+  z-index: -2;
+  filter: contrast(120%);
+  width: 15%;
+}

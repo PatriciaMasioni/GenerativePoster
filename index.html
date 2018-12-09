@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Generative poster</title>
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <main>
+      <img src="RSC/cercle.png" alt="Red circle" class="circle">
+      <section class="poster">
+        <section class="poster-infos">
+          <h2>Festival</h2>
+          <h1>Piednu</h1>
+          <p>Musiques nouvelles <br> et expérimentales
+          </p>
+        </section>
+        <section class="poster-date">
+          <h2>21/31 Mars 2019</h2>
+        </section>
+      </section>
+    </main>
+    <script type="text/javascript">
+      const main = document.querySelector("main");
+      main.style.height = window.innerHeight + "px";
+
+      const imgs = ["motif_1.png", "motif_2.png", "motif_3.png", "motif_4.png",
+      "motif_5.png", "motif_6.png", "motif_7.png", "motif_8.png", "motif_9.png",
+      "motif_10.png", "motif_11.png"];
+
+      let imgNumb = 1;
+      function patternAnimation() {
+        imgNumb++;
+        if(imgNumb > 11) imgNumb = 1;
+        const img = document.createElement('img');
+        img.src = "RSC/" + imgs[imgNumb];
+        img.classList.add("pattern");
+        img.style.top = Math.random() < 0.5 ? Math.random() * 1000 + "px" : "-" + Math.random() * 100 + "px";
+        img.style.right = Math.random() < 0.5 ? Math.random() * 1000 + "px" : "-" + Math.random() * 100 + "px";
+        img.style.bottom = Math.random() < 0.5 ? Math.random() * 1000 + "px" : "-" + Math.random() * 100 + "px";
+        img.style.left = Math.random() < 0.5 ? Math.random() * 1000 + "px" : "-" + Math.random() * 100 + "px";
+        // img.style.right = "-" + Math.random() * 100 + "px";
+        // img.style.bottom = Math.random() * 100 + "px";
+        // img.style.left = Math.random() * 100 + "px";
+        console.log(img);
+        main.appendChild(img);
+      }
+
+      main.addEventListener("click", patternAnimation);
+
+    </script>
+  </body>
+</html>
