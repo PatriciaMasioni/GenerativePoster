@@ -29,23 +29,20 @@
       "motif_10.png", "motif_11.png"];
 
       let imgNumb = 0;
-      function patternAnimation() {
+      function patternAnimation(mouse) {
         imgNumb++;
-        if(imgNumb > 10) imgNumb = 0;
+        if(imgNumb >= imgs.length) imgNumb = 0;
         const img = document.createElement('img');
         img.src = "RSC/" + imgs[imgNumb];
         img.classList.add("pattern");
-        img.style.top = Math.random() < 0.5 ? Math.random() * 1000 + "px" : "-" + Math.random() * 100 + "px";
-        img.style.right = Math.random() < 0.5 ? Math.random() * 1000 + "px" : "-" + Math.random() * 100 + "px";
-        img.style.bottom = Math.random() < 0.5 ? Math.random() * 1000 + "px" : "-" + Math.random() * 100 + "px";
-        img.style.left = Math.random() < 0.5 ? Math.random() * 1000 + "px" : "-" + Math.random() * 100 + "px";
-        // img.style.right = "-" + Math.random() * 100 + "px";
-        // img.style.bottom = Math.random() * 100 + "px";
-        // img.style.left = Math.random() * 100 + "px";
+        // img.style.top = "-" + mouse.clientY + "px";
+        // img.style.right = mouse.clientX + "px";
+        img.style.bottom = mouse.screenY + "px";
+        img.style.left = mouse.screenX + "px";
         main.appendChild(img);
       }
 
-      main.addEventListener("click", patternAnimation);
+      main.addEventListener("click", (e) => patternAnimation(e));
 
     </script>
   </body>
