@@ -29,11 +29,17 @@
       "motif_5.png", "motif_6.png", "motif_7.png", "motif_8.png", "motif_9.png",
       "motif_10.png", "motif_11.png", "motif_12.png", "motif_13.png"];
 
+//Créer Section, puis la mettre parent de "img" qui est créée dans la function
+      const section = document.createElement("section");
+      section.classList.add("motifs");
+      main.appendChild(section);
+
       let imgNumb = 0;
       function patternAnimation(mouse) {
         imgNumb++;
         if(imgNumb >= imgs.length) imgNumb = 0;
         const img = document.createElement('img');
+
         img.src = "RSC/" + imgs[imgNumb];
         img.classList.add("pattern");
         // img.style.top = "-" + mouse.clientY + "px";
@@ -41,7 +47,11 @@
         img.style.bottom = mouse.screenY + "px";
         img.style.left = mouse.screenX + "px";
         main.appendChild(img);
+        //Selectioner la "var Section" créée en dehaor de fonction pour la rendre parent de "img"
+        section.appendChild(img);
+
       }
+
 
       main.addEventListener("mouseover", (e) => patternAnimation(e));
 

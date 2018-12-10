@@ -18,6 +18,8 @@ html {
 }
 
 body {
+  position: absolute;
+  z-index: -2;
   background: var(--brand-color);
   font-family: "Citizen OT";
   margin: 0;
@@ -97,12 +99,18 @@ main {
   margin-right: 5rem;
 
 
-
-}
-
+/* }
+.motifs::after{
+  content: "";
+  position: absolute;
+  background: chartreuse;
+  opacity: 0.57;
+  z-index: 1;
+} */
 .pattern {
   position: absolute;
   z-index: -2;
   filter: contrast(150%);
   width: 12%;
+
 }
