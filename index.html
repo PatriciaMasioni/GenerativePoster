@@ -3,15 +3,16 @@
   <head>
     <meta charset="utf-8">
     <title>Generative poster</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <!-- <link rel="stylesheet" href="/css/style.css"> -->
+    <link rel="stylesheet" href="css/style.css"
   </head>
   <body>
     <main>
       <img src="RSC/cercle.png" alt="Red circle" class="circle">
       <section class="poster">
         <section class="poster-infos">
-          <h2>Festival</h2>
-          <h1>Piednu</h1>
+          <h2 class="subtitle">Festival</h2>
+          <h1>PiedNu</h1>
           <p>Musiques nouvelles <br> et expérimentales
           </p>
         </section>
@@ -26,7 +27,7 @@
 
       const imgs = ["motif_1.png", "motif_2.png", "motif_3.png", "motif_4.png",
       "motif_5.png", "motif_6.png", "motif_7.png", "motif_8.png", "motif_9.png",
-      "motif_10.png", "motif_11.png"];
+      "motif_10.png", "motif_11.png", "motif_12.png", "motif_13.png"];
 
       let imgNumb = 0;
       function patternAnimation(mouse) {
@@ -42,7 +43,7 @@
         main.appendChild(img);
       }
 
-      main.addEventListener("click", (e) => patternAnimation(e));
+      main.addEventListener("mouseover", (e) => patternAnimation(e));
 
     </script>
   </body>

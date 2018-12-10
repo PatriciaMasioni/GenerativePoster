@@ -22,6 +22,7 @@ body {
   font-family: "Citizen OT";
   margin: 0;
   overflow: hidden;
+
 }
 
 
@@ -30,11 +31,28 @@ body {
 
 h1, h2, p {
   margin: 0 auto;
+  font-weight: bold;
+
 }
 
 h1 {
   text-transform: uppercase;
+  font-weight: bold;
+  font-size: 8rem;
+}
+
+h2.subtitle{
+  font-size: 5rem;
+  margin-bottom: -0.8rem;
+  margin-left: 0.5rem;
+  font-weight: bold;
+
+}
+
+p{
   font-size: 3rem;
+  margin-top: -1.5rem;
+  margin-left: 0.5rem;
 }
 
 /* Poster */
@@ -48,9 +66,10 @@ main {
 }
 
 .circle {
-  width: 20rem;
-  height: 20rem;
-  opacity: .75;
+  width: 15rem;
+  height: 15rem;
+  opacity: 1;
+  margin-right: 10rem;
 }
 
 .poster {
@@ -61,7 +80,10 @@ main {
 }
 
 .poster-infos {
-  padding-bottom: var(--base-padding);
+  /* padding-bottom: var(--base-padding); */
+  margin-left: 3rem;
+  /* height: 50vh;
+  width: 40vh; */
 }
 
 .poster-date {
@@ -70,11 +92,17 @@ main {
 
 .poster-date h2 {
   transform: rotate(-90deg);
+  font-size: 2rem;
+  font-weight: bold;
+  margin-right: 5rem;
+
+
+
 }
 
 .pattern {
   position: absolute;
   z-index: -2;
-  filter: contrast(120%);
-  width: 15%;
+  filter: contrast(150%);
+  width: 12%;
 }
